@@ -1,0 +1,39 @@
+# Secrets & environment
+.env
+.venv/
+env/
+venv/
+
+# Local config (generated from the .example template by setup.sh)
+config.yaml
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+build/
+dist/
+
+# Generated output — keep the folders, ignore their contents
+logs/*.log
+reports/*.json
+reports/*.html
+reports/*.md
+reports/*.txt
+!logs/.gitkeep
+!reports/.gitkeep
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/

@@ -1,0 +1,33 @@
+# ==========================================================
+# INTERNSHIELD CSCC — CONFIGURATION
+# ==========================================================
+# Copy this file to "config.yaml" to customize settings.
+# If config.yaml doesn't exist, sensible defaults (shown below) are used.
+
+app:
+  name: "InternShield CSCC"
+  version: "2.0"
+  log_level: "INFO"     # DEBUG | INFO | WARNING | ERROR | CRITICAL
+
+aws:
+  default_region: "us-east-1"
+  max_retries: 3
+
+ai:
+  # shellgpt | openai | anthropic | auto | disabled
+  #   "auto" tries shellgpt -> openai -> anthropic -> offline advisor,
+  #   in that order, and uses whichever one actually works. This is
+  #   the recommended, most "durable" setting.
+  default_provider: "auto"
+  require_human_confirmation: true
+  openai_model: "gpt-4o-mini"
+  anthropic_model: "claude-3-5-haiku-20241022"
+  # Caps how many findings get sent to the AI per run, to protect a
+  # free/limited-token API key from being exhausted in a single scan.
+  max_findings_sent_to_ai: 15
+
+reporting:
+  output_dir: "reports"
+  default_formats:
+    - json
+    - html

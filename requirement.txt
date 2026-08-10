@@ -1,0 +1,22 @@
+# InternShield CSCC — Python dependencies
+# Install with: pip install -r requirement.txt
+
+# --- Core / CLI ---
+rich>=13.0.0
+typer>=0.9.0
+questionary>=2.0.0
+
+# --- Data / Config ---
+pydantic>=2.0.0
+pyyaml>=6.0
+python-dotenv>=1.0.0
+
+# --- Cloud / Scanners ---
+boto3>=1.28.0
+
+# --- AI providers (OpenAI + Anthropic/Claude use plain HTTPS via requests,
+#     no heavyweight SDK required — keeps install light & durable) ---
+requests>=2.31.0
+
+# --- Optional but recommended: local AI fallback used by the error-resolver ---
+# shell-gpt>=1.4.0   # <- uncomment, or let setup.sh install it for you (non-fatal if it fails)
